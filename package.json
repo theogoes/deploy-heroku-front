@@ -1,6 +1,7 @@
 {
   "name": "socialmedia-frontend",
   "version": "0.1.0",
+  "main": "index.js",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.17.3",
