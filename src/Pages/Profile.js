@@ -14,11 +14,16 @@ function Profile() {
     useEffect(() =>{
         async function geType(){
             try {
-                const resp = await api.get("/users/"+id)
+                try {
+                    const resp = await api.get("/users/"+id)
+                } catch (error) {
+                    const resp = await api.get("/users/"+id)
+                    setType(1)
+                }
                 
-                console.log(tipo);
+                
             } catch (error) {
-                setType(1)
+                
             }
         }
         geType()
