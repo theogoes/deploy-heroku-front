@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import {GiPartyPopper} from 'react-icons/gi'
+import InputPartyStandart from '../standarts/InputPartyStandart';
 
 
 
@@ -8,18 +9,13 @@ import {GiPartyPopper} from 'react-icons/gi'
 function PostStep1({setPostStep}) {
 
 
-  return (
 
+  return (
     <>
      <GiPartyPopper id='map' />
       <label>
         <h3>Nome :  </h3>
-        <div className='input'>
-          <div className="input-field">
-            <input id='input' />
-          </div>
-        <button onClick={setPostStep(1)}> Next</button>
-        </div>
+          <InputPartyStandart setPostStep={setPostStep} postStep={1} valueStorage={"FN"}/>
       </label>
       </>
 

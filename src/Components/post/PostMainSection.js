@@ -12,6 +12,7 @@ function PostMainSection() {
     console.log(chosen)
   }
 
+
   return (
   <>
     <main>

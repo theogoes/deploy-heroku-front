@@ -12,11 +12,11 @@ export default function BottomNav() {
                 <Link to={"/feed"}>
                     <AiFillHome className='BottomIcon'/>
                 </Link>
-                <Link to={"/post"}>
+                <Link to={"/party"}>
                     <AiFillPlusCircle className='BottomIcon'/>
                 </Link>    
             </nav>
-            <a href='/post'>
+            <a href='/party'>
             <div className='butt'>
             <button class="kc_fab_main_btn">+</button>
             </div>

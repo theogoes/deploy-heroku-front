@@ -24,7 +24,7 @@ function Router() {
             <Routes>
                 <Route exact path="/" element={userID?<Navigate to="/feed"/>:<Login updateUserID = {updateUserID}/> }/>  
                 <Route exact path="/feed" element={userID?<Fedd clearUserID={clearUserID}/> : <Navigate to="/"/>}/>
-                <Route exact path="/post" element={<Post/>}/>
+                <Route exact path="/party" element={<Post/>}/>
                 <Route exact path="/register" element={!userID?<Register updateUserID = {updateUserID}/>: <Navigate to="/"/>}/>
                 <Route exact path="/p/:id" element={userID?<Profile/>: <Navigate to="/"/>}/>
             </Routes>

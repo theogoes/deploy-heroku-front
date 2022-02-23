@@ -1,5 +1,6 @@
 import React from 'react';
 import { BiMapAlt } from 'react-icons/bi'
+import InputPartyStandart from '../standarts/InputPartyStandart';
 
 function PostStep2({setPostStep}) {
   return (
@@ -7,12 +8,7 @@ function PostStep2({setPostStep}) {
     <BiMapAlt id='map' />
      <label>
        <h3>Local : </h3>
-       <div className='input'>
-         <div className="input-field">
-           <input id='input' />
-         </div>
-       <button onClick={setPostStep(2)}> Next</button>
-       </div>
+        <InputPartyStandart setPostStep={setPostStep} postStep={2} valueStorage={"FL"}/>
      </label>
      </>
   );
