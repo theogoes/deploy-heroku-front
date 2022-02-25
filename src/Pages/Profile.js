@@ -14,16 +14,9 @@ function Profile() {
     useEffect(() =>{
         async function geType(){
             try {
-                try {
-                    const resp = await api.get("/users/"+id)
-                } catch (error) {
-                    const resp = await api.get("/users/"+id)
-                    setType(1)
-                }
-                
-                
+                const resp = await api.get("/users/"+id)
             } catch (error) {
-                
+                setType(1)
             }
         }
         geType()
@@ -35,7 +28,7 @@ function Profile() {
             {tipo === 0?
             <ProfileMainSection/>
             :
-            <PartyMainSection/>
+            <PartyMainSection id={id}/>
             }
         </>
     )
