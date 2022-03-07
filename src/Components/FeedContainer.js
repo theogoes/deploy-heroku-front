@@ -18,9 +18,10 @@ function FeedContainer() {
         console.log("Bom dia :D")
         async function getPosts(){
             try {
-                const post = await api.get('party')
+                const post = await api.get('post')
                 const {data} = post
                 setLoadPost(data.data)
+                console.log(data);
             } catch (error) {
                 alert("deu ruim padrim : " + error)
             }
@@ -32,17 +33,17 @@ function FeedContainer() {
         <>
             {loadPost === null ? <LoaderStandart/> :
                 loadPost.map(post =>(
-                   /* <FeedCard key={post._id} 
+                   <FeedCard key={post._id} 
                     picture={post.picture} 
                     usr ={post.user.userName} 
                     desc = {post.description}
                     likes = {post.likes}
-                    avatar = {post.gerente.avatar}
+                    avatar = {post.user.avatar}
                     id = {post._id}
                     inter = {interactionPost}
                     userId = {post.user._id}
-                    />*/
-                    console.log()
+                    />
+                    
                 ))
             }
         </>
